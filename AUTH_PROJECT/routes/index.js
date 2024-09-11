@@ -6,7 +6,7 @@ const router = express.Router()
 //List the route
 
 router.get('/', (req, res) =>{
-    res.send('THIS is index page')
+    res.render('welcome')
 })
 
 

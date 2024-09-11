@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
-const index = require('./routes/index')
-const u = require('./routes/user')
+const expressLayouts = require('express-ejs-layouts');
+
 
 
 
@@ -10,7 +10,9 @@ const u = require('./routes/user')
 app.use('/', require('./routes/index'))
 app.use('/users', require('./routes/user'))
 
-
+// EJS
+app.use(expressLayouts);
+app.set('view engine', 'ejs');
 
 
 
