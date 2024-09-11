@@ -9,8 +9,14 @@ app.get('/',(req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'index.html'))
 })
 
-app.get('/new-page.html', (req,res) => {
+app.get('/new-page', (req,res) => {
     res.sendFile(path.join(__dirname, 'views', 'new-page.html'))
+})
+
+app.get('/*', (req, res) =>{
+    console.log("Appemted to the unknown page");
+    
+    res.redirect('/new-page')
 })
 
 
