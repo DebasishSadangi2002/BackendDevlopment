@@ -6,7 +6,7 @@ const PORT = 3000
 
 
 app.get('/',(req, res) => {
-    res.send("Hello World")
+    res.sendFile('./views/index.html', {root: __dirname})
 })
 
 
